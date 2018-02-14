@@ -1,0 +1,18 @@
+{
+  "movie": {
+    "class": "com.pierrrrrrrot.sandbox.hollywood.firstcasting.Movie",
+    "properties": {
+      "firstActor": "privateActor"
+    }
+  },
+  "favoriteScenarist": {
+    "class": "com.pierrrrrrrot.sandbox.hollywood.firstcasting.FavoriteScenarist",
+    "properties": {}
+  },
+  "privateActor": {
+    "class": "com.pierrrrrrrot.sandbox.hollywood.firstcasting.PrivateActor",
+    "properties": {
+      "favoriteScenarist": "favoriteScenarist"
+    }
+  }
+}
