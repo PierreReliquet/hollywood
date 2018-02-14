@@ -44,7 +44,7 @@ public class Hollywood {
             }
 
             try {
-                Field field = instantiatedDependency.clazz.getField(name);
+                Field field = instantiatedDependency.clazz.getDeclaredField(name);
 
                 boolean initiallyAccessible = field.isAccessible();
                 field.setAccessible(true);
