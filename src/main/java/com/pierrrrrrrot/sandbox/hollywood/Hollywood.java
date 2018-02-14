@@ -63,10 +63,10 @@ public class Hollywood {
         try {
             Class<?> dependencyClass = Class.forName(dependency.clazz);
 
-            // TODO check if the constructor stuff is required
+            // Let's handle private constructors
             Constructor<?> constructor = dependencyClass.getDeclaredConstructor();
             boolean isInitiallyAccessible = constructor.isAccessible();
-            // Let's make the constructor
+            // Let's make the constructor accessible to face any private constructor
             constructor.setAccessible(true);
             Object instance = constructor.newInstance();
             constructor.setAccessible(isInitiallyAccessible);
